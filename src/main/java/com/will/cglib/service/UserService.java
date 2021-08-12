@@ -2,9 +2,8 @@ package com.will.cglib.service;
 
 /*
  * - Dynamic Proxy의 한계
- * 별도로 인터페이스가 구현되지 않은 객체.
- * Dynamic Proxy를 이용할 수 없음.
- * 이때 Spring AOP는 Cglib을 이용한다.
+ * 별도로 인터페이스가 구현되지 않은 객체는 Dynamic Proxy를 이용할 수 없음.
+ * 그래서 Spring AOP는 인터페이스가 구현되지 않은 클래스의 대해 프록시를 생성하기 위해서 Cglib을 이용한다.
  *
  * - Cglib 의 한계 (3.x부터는 개선되었을수도)
  * 제약사항: 참고로 Cglib은 상속이 불가능하면 사용할 수 없음. (final class or private constructor ...)
